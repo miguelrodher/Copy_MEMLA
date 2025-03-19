@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+[x-cloak] {
+    display: none !important;
+}
+
+     /* Tooltip container */
+ .tooltip {
+     position: relative;
+     display: inline-block;
+     cursor: pointer;
+ }
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%; /* Position the tooltip text above the tooltip container */
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Tooltip arrow */
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* At the bottom of the tooltip */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/*
+.drag-and-drop {
+    display: flex;
+    max-width: 760px;
+    padding: 20px;
+    margin: 0 auto;
+
+    &__container {
+        position: relative;
+        overflow: hidden;
+        width: 50%;
+        border: 1px solid #ccc;
+        border-radius: 10px;
+    }
+
+    &__divider {
+        padding: 10px;
+        font-size: 20px;
+        align-self: center;
+    }
+
+    &__title {
+        padding: 15px 20px;
+        font-size: 20px;
+        background: #ddd;
+    }
+
+    &__items {
+        position: relative;
+        overflow: hidden;
+        height: 100%;
+        min-height: 150px;
+        margin: 0 -1px;
+        padding-bottom: 40px;
+        border-top: 1px solid #ccc;
+
+        &--adding {
+            background-color: #9AE6B4;
+        }
+
+        &--removing {
+            background-color: #FBD38D;
+        }
+    }
+
+    &__item {
+        padding: 15px 20px;
+        border: 1px solid #ccc;
+        border-top: 0;
+        line-height: 1;
+        cursor: move;
+        background-color: #fff;
+
+        &:hover {
+            background-color: #eee;
+        }
+
+        &--dragging {
+            color: #ccc !important;
+            background-color: #fff !important;
+        }
+    }
+}
+*/
+
+.tabla-matriz-confusion {
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+.tabla-matriz-confusion th,
+.tabla-matriz-confusion td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+
+.tabla-matriz-confusion th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+}
